@@ -12,7 +12,7 @@ public class Contacts {
 	private String phoneNumber;
 	private String email;
 
-	// Use parameterised constructor
+	// Use parameterized constructor
 	public Contacts(String firstName, String lastName, String address, String city, String state, String zip,
 			String phoneNumber, String email) {
 		super();
@@ -89,6 +89,13 @@ public class Contacts {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	// to string
+
+	@Override
+	public String toString() {
+		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
+				+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
 	}
 
 }
