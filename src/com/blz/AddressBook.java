@@ -102,12 +102,28 @@ public class AddressBook {
 		}
 	}
 
+	public void addMultiplePerson() {
+		while (true) {
+			System.out.println(
+					"Enter the option \n1)To Add Contact\n2)To Edit Contact" + "\n3)To Delete Contact\n4)exit");
+			int option = scanner.nextInt();
+			switch (option) {
+			case 1 -> addPerson();
+			case 2 -> editPerson();
+			case 3 -> deletePerson();
+			case 4 -> System.out.println("exiting");
+			default -> System.out.println("invalid option");
+			}
+			if (option == 4)
+				break;
+		}
+	}
+
 	public static void main(String[] args) {
 		AddressBook addressBook = new AddressBook();
 		System.out.println("Welcome in Addressbook..!!!");
-		addressBook.addPerson();
-		addressBook.editPerson();
-		addressBook.deletePerson();
+		addressBook.addMultiplePerson();
+
 	}
 
 }
